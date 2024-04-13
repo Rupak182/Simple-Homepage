@@ -2,7 +2,20 @@
 module.exports = {
   content: ["*.{html,js}"],
   theme: {
-    extend: {},
+
+    screens: {
+      'sm': '700px',
+
+      'md': '900px',
+
+      'lg': '1250px',
+    },
+
+    extend: {
+      fontFamily:{
+       poppins:["Poppins", "sans-serif"]
+      }
+    },
   },
   plugins: [],
 }

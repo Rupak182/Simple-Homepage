@@ -10,17 +10,22 @@ let hideMenu= ()=> {
    menu.addEventListener('click',(e)=>{
         menu.display="none";
         sidebar.style.display="flex";
+        sidebar.style.flexDirection="column";
 
          
    }
 )};
 
 
-    let showMenu = ()=>{
-        close.addEventListener("click",()=>{
-            sidebar.style.display="none";
-        })
-    };
+let showMenu = ()=>{
+    close.addEventListener("click",()=>{
+        sidebar.style.display="none";
+    })
+};
+
+
+
+
 
     let darkMode = () =>{
         let dark =document.querySelectorAll(".dark");
@@ -37,6 +42,8 @@ let hideMenu= ()=> {
 
                     let img = document.querySelector(".logo")
                     img.src="assets/alarado-icon-homepage-dark.svg";
+
+                    document.querySelector("#menu").src ="assets/menu_light.svg";
 
                 });
                 
@@ -110,9 +117,8 @@ let hideMenu= ()=> {
 
 
 
-
-hideMenu();
 showMenu();
+hideMenu();
 darkMode();
 itemSwitch();
 lightMode();
